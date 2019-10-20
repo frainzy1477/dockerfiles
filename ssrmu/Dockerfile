@@ -46,7 +46,21 @@ RUN  apk --no-cache add \
      ln -s /usr/bin/python3 /usr/bin/python   && \
      ln -s /usr/bin/pip3    /usr/bin/pip      && \
      pip install --upgrade pip                && \
-     pip install -r requirements.txt          && \
+     pip install  asn1crypto==0.24.0  && \
+     pip install  certifi==2018.11.29 && \
+     pip install  cffi==1.11.5 && \
+     pip install  chardet==3.0.4 && \
+     pip install  cryptography==2.3 && \
+     pip install  cymysql==0.9.13 && \
+     pip install  idna==2.7 && \
+     pip install  ndg-httpsclient==0.5.1 && \
+     pip install  pyasn1==0.4.5 && \
+     pip install  pycparser==2.18 && \
+     pip install  pycryptodome==3.7.3 && \
+     pip install  pyOpenSSL==19.0.0 && \
+     pip install  requests==2.21.0 && \
+     pip install  six==1.11.0 && \
+     pip install  urllib3==1.24.2 && \
      rm -rf ~/.cache && touch /etc/hosts.deny && \
      apk del --purge .build-deps
 
